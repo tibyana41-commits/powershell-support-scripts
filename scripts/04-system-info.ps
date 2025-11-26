@@ -1,0 +1,10 @@
+# Script 04: System Info Collector
+# Description: Collects system information into a text file
+
+Write-Output "=== Collecting System Info ==="
+
+$reportPath = "$env:USERPROFILE\Desktop\system_report.txt"
+
+Get-ComputerInfo | Out-File $reportPath
+
+Write-Output "System report saved at $reportPath"
